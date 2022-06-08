@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1> Minesweeper</h1>
+    <div>
+        <button id="reset" onclick="window.location.reload();">New game</button>
+        <button id="easy" class="level" onclick=startgame(id);>Easy </button>
+        <button id="medium" class="level" onclick=startgame(id);>Medium</button>
+        <button id="hard" class="level" onclick=startgame(id);>Hard</button>
+        <button id="flag" onclick=switchFlag();>Flag</button>
+        <br>
+        <div id="mines-remained"></div>
+        <div id="time"></div>
+    </div>
+    <br>
+    <table id="matrix"></table>
+    <br>
+    <br>
+    <div id="id-win"></div>
+</body>
