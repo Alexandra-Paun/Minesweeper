@@ -113,6 +113,7 @@ function clickedCell(matrix, i, j) {
         }
         if (flag == 1 && matrix[i][j].value == 0) {
             matrix[i][j].textContent = "🚩";
+            matrix[i][j].value = 1;
         } else if (flag == 0) {
             if (hiddenBoard[i][j] == "0") {
                 matrix[i][j].textContent = "";
@@ -127,8 +128,9 @@ function clickedCell(matrix, i, j) {
                 document.getElementById("id-win").innerHTML = "You Lost";
                 document.getElementById("id-win").style = "font-size: 20px";
             }
+
         }
-        if (hiddenBoard[i][j] == "") {
+        if (hiddenBoard[i][j] == "" && flag == 0) {
             findEmptyCells(i, j);
         }
         checkTheWinning();
